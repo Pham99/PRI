@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="jmeno" type="xs:string"/>
+    <xs:element name="prijmeni" type="xs:string"/>
+    <xs:element name="studentske_cislo" type="xs:string"/>
+    <xs:element name="email" type="xs:string"/>
+    <xs:element name="studijni_rok" type="xs:gYear"/>
+
+    <xs:element name="studenty">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="student" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="student">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="jmeno" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="prijmeni" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="studentske_cislo"/>
+                <xs:element ref="email"/>
+                <xs:element ref="studijni_rok"/>
+                <xs:element ref="forma"/>
+                <xs:element ref="rozvrh"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="predmet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nazev" type="xs:string"/>
+                <xs:element name="zkratka" type="xs:string"/>
+                <xs:element name="od" type="xs:time"/>
+                <xs:element name="do" type="xs:time"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="rozvrh">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="predmet" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+        <xs:element name="prezencni" type="emptyType"/>
+        <xs:element name="kombinovany" type="emptyType"/>
+        <xs:element name="dalkovy" type="emptyType"/>
+    
+        <xs:element name="forma">
+            <xs:complexType>
+                <xs:choice>
+                    <xs:element ref="prezencni"/>
+                    <xs:element ref="kombinovany"/>
+                    <xs:element ref="dalkovy"/>
+                </xs:choice>
+            </xs:complexType>
+        </xs:element>
+    
+        <xs:simpleType name="emptyType">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value=""/>
+            </xs:restriction>
+        </xs:simpleType>
+
+
+</xs:schema>

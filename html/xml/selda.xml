@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game>
+    <name>The Legend of Zelda: Breath of the Wild</name>
+    <release_date>2017-03-03</release_date>
+    <genre>Action-adventure</genre>
+    <developer>Nintendo</developer>
+    <publisher>Nintendo</publisher>
+    <platformz>
+        <platform>Nintendo Switch</platform>
+        <platform>Wii U</platform>
+    </platformz>
+    <description>
+        An open-world action-adventure game where players control Link, who awakens from a long slumber to a mysterious voice that guides him to defeat Calamity Ganon and save Hyrule.
+    </description>
+    <rating>100</rating>
+</game>

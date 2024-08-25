@@ -1,0 +1,29 @@
+studenty {
+    background: grey;
+}
+
+jmeno, prijmeni {
+    display: inline;
+    font-size: 40px;
+
+}
+
+studentske_cislo, email, studijni_rok {
+    display: block;
+    color: aliceblue;
+}
+
+predmet {
+    display: block;
+    color: blue;
+    padding: 10px;
+    padding-left: 50px;
+}
+
+nazev, zkratka, od, do {
+    display: block;
+}
+
+nazev {
+    font-size: 40px;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="student.css"?>
+<!-- jméno, příjmení, studentské číslo, email, studijní rok, rozvrh, předměty, splněné předměty a další zajímavé informace. -->
+
+<studenty>
+    <student>
+        <jmeno>Bill</jmeno>
+        <prijmeni>Gates</prijmeni>
+        <studentske_cislo>F66600</studentske_cislo>
+        <email>billgates@microsoft.com</email>
+        <studijni_rok>1984</studijni_rok>
+        <forma>
+            <prezencni/>
+        </forma>
+        <rozvrh>
+            <predmet>
+                <nazev>Programování pro Internet</nazev>
+                <zkratka>PRI</zkratka>
+                <od>17:00:00</od>
+                <do>18:50:00</do>
+            </predmet>
+        </rozvrh>
+    </student>
+    <student>
+        <jmeno>Steve</jmeno>
+        <prijmeni>Jobs</prijmeni>
+        <studentske_cislo>F42000</studentske_cislo>
+        <email>stevejobs@apple.com</email>
+        <studijni_rok>1984</studijni_rok>
+        <forma>
+            <kombinovany/>
+        </forma>
+        <rozvrh>
+            <predmet>
+                <nazev>Produktový design</nazev>
+                <zkratka>PD</zkratka>
+                <od>8:00:00</od>
+                <do>9:00:00</do>
+            </predmet>
+        </rozvrh>
+    </student>
+</studenty>

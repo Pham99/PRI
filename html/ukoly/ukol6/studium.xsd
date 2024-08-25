@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="nazev">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:maxLength value="64"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="vyucujici">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:maxLength value="64"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="kredity">
+        <xs:simpleType>
+            <xs:restriction base="xs:byte">
+                <xs:minInclusive value="0"/>
+                <xs:maxInclusive value="10"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="status">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:pattern value="[ABC]"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="zakonceni">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:enumeration value="Zápočet"/>
+                <xs:enumeration value="Zkouška"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:attribute name="katedra">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:pattern value="[A-Z]{1,6}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="kod">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:pattern value="[A-Z0-9]{1,5}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="nazev">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:enumeration value="letni"/>
+                <xs:enumeration value="zimni"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="cislo">
+        <xs:simpleType>
+            <xs:restriction base="xs:byte">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="5"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:element name="predmet">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nazev" maxOccurs="1"/>
+                <xs:element ref="vyucujici" maxOccurs="5"/>
+                <xs:element ref="kredity" maxOccurs="1"/>
+                <xs:element ref="status" maxOccurs="1"/>
+                <xs:element ref="zakonceni" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute ref="katedra"/>
+            <xs:attribute ref="kod"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="semestr">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="predmet" maxOccurs="100"/>
+            </xs:sequence>
+            <xs:attribute ref="nazev"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="rocnik">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="semestr" minOccurs="1" maxOccurs="2"/>
+            </xs:sequence>
+            <xs:attribute ref="cislo"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="studium">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="rocnik" minOccurs="1" maxOccurs="6"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

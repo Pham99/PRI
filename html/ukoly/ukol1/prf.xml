@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fakulta děkan="Balej">
+    <katedra zkratka_katedry="KI" webové_stránky="ki.ujep.cz">
+        <vedoucí>
+            <jméno>
+                Jiří Škvor
+            </jméno>
+            <email>
+                jiri.skvor@ujep.cz
+            </email>
+            <telefon>
+                +2387902408
+            </telefon>
+        </vedoucí>
+        <zaměstnanci>
+            <zaměstnanec>
+                <jméno>
+                    Jiří Přibyl
+                </jméno>
+                <telefon>
+                    +123456789
+                </telefon>
+                <pozice>
+                    <odborný_asistent />
+                </pozice>
+            </zaměstnanec>
+            <zaměstnanec>
+                <jméno>
+                    Pavel Beránek
+                </jméno>
+                <telefon>
+                    +986612344
+                </telefon>
+                <pozice>
+                    <profesor />
+                </pozice>
+            </zaměstnanec>
+        </zaměstnanci>
+        <předměty>
+            <předmět zkratka="PRI" typ="kombinované">
+                <název>
+                    Programování Internetu
+                </název>
+            </předmět>
+        </předměty>
+    </katedra>
+</fakulta>

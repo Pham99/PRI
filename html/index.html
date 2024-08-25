@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        
+        /* Body styling */
+        body {
+            height: 100vh;
+            font-family: Arial;
+        }
+        
+        /* Container for the boxes */
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Styling for each box */
+        .box {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 300px 100px 300px 100px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.5em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Different background colors for the left and right boxes */
+        .left {
+            background-color: #007BFF;
+        }
+        
+        .right {
+            background-color: #28A745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="ukoly/ukol1/ukol1.php" class="box left">
+            <p>Cvičení</p>
+        </a>
+        <a href="home.php" class="box right">
+            <p>Aplikace</p>
+        </a>
+    </div>
+</body>
+</html>
+
+

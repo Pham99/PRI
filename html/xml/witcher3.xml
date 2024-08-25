@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<game>
+    <name>The Witcher 3: Wild Hunt</name>
+    <release_date>2015-05-19</release_date>
+    <genre>RPG</genre>
+    <developer>CD Projekt Red</developer>
+    <publisher>CD Projekt</publisher>
+    <platforms>
+        <platform>PlayStation 4</platform>
+        <platform>Xbox One</platform>
+        <platform>PC</platform>
+        <platform>Nintendo Switch</platform>
+    </platforms>
+    <description>A story-driven, next-generation open world role-playing game set in a visually stunning fantasy universe full of meaningful choices and impactful consequences.</description>
+    <rating>9.5</rating>
+</game>

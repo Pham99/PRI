@@ -1,0 +1,23 @@
+<!ELEMENT studenty (student)>
+
+<!ELEMENT student (jmeno, prijmeni, studentske_cislo, email, studijni_rok, forma, rozvrh)>
+
+<!ELEMENT jmeno (#PCDATA)>
+<!ELEMENT prijmeni (#PCDATA)>
+<!ELEMENT studentske_cislo (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT studijni_rok (#PCDATA)>
+<!ELEMENT forma (prezencni|kombinovany|dalkovy)?>
+
+<!ELEMENT prezencni EMPTY>
+<!ELEMENT kombinovany EMPTY>
+<!ELEMENT dalkovy EMPTY>
+
+<!ELEMENT rozvrh (predmet)>
+
+<!ELEMENT predmet (nazev, zkratka, od, do)>
+
+<!ELEMENT nazev (#PCDATA)>
+<!ELEMENT zkratka (#PCDATA)>
+<!ELEMENT od (#PCDATA)>
+<!ELEMENT do (#PCDATA)>

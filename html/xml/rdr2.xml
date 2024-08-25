@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<game>
+    <name>Red Dead Redemption 2</name>
+    <release_date>2018-10-26</release_date>
+    <genre>Action-adventure</genre>
+    <developer>Rockstar Games</developer>
+    <publisher>Rockstar Games</publisher>
+    <platforms>
+        <platform>PlayStation 4</platform>
+        <platform>Xbox One</platform>
+        <platform>PC</platform>
+        <platform>Stadia</platform>
+    </platforms>
+    <description>An epic tale of life in America at the dawn of the modern age, featuring a vast and atmospheric world that provides the foundation for a brand new online multiplayer experience.</description>
+    <rating>10</rating>
+</game>
